@@ -1,0 +1,159 @@
+<!-- Font Awesome CDN (Add in <head>) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Subscribe Newsletters</h3>
+          <form class="footer-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p><strong>Location:</strong> Palestine</p>
+          <p><strong>Phone:</strong> <a href="tel:+970592155128" style="color: white;">+970592155128</a></p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/service.html">Services</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:marvads2025@gmail.com"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <hr>
+      <p class="footer-bottom">&copy; <span id="current-year"></span> Marvads Agency. All Rights Reserved.</p>
+    </footer>
+    
+  
+<style>.site-footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .footer-column h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+  
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-form input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .footer-form button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .footer-form button:hover {
+    background-color: #e65c00;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin: 0.3rem 0;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #ff6600;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ff6600;
+  }
+  
+  hr {
+    margin: 2rem auto 1rem auto;
+    border: none;
+    border-top: 1px solid #444;
+    max-width: 1100px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.85rem;
+  }
+  .site-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ff6600; 
+}
+  
+
+</style>
+  
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+  

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="images/ImgLogo.jpg" type="image/x-icon" />
+  <title>About Marv Ads</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+
+  <link rel="stylesheet" href="aboutStyle.css" />
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <img src="/images/Logo.png" alt="Company Logo" class="logo" />
+      <div class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">&#9776;</div>
+      <nav class="navbar">
+        <ul class="nav-menu" id="nav-menu">
+                      <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/Service.html">Service</a></li>
+            <li><a href="/Contact.html" class="contact-btn">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="logo-section">
+    
+    <img src="/images/Logo.png" alt="Marv Ads Logo" />
+  </section>
+
+  <section class="intro-boxes">
+    <div class="box box-primary">
+      <p>
+        
+        Marv Ads is a digital marketing specialized online platform. The Marv aims to provide a wide range of marketing services for businesses and brands, with a strong focus on innovation and digital transformation. It integrates cutting-edge AI technologies into advertising, including advanced CGI techniques, to deliver professional and visually engaging content.
+      </p>
+    </div>
+    <div class="box box-secondary">
+      <p>
+At Marv Ads, we don’t just advertise we create experiences.
+        <br/>
+        
+        We are a visionary marketing agency that blends mystery, elegance, and creativity to launch unforgettable campaigns. Whether you’re a brand seeking to shine or a product waiting to rise, Marv Ads crafts stories that leave a lasting impact.
+      </p>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <section class="values-container">
+        <div class="value-box">
+          <div class="icon">🚀</div>
+          <p><strong>Our Vision:</strong>To transform the marketing landscape in Palestine through innovation, emotional connection, and distinctive style.</p>
+        </div>
+        <div class="value-box">
+          <div class="icon">🎨</div>
+          <p><strong>What We Do:</strong>From strategic campaigns to immersive advertising experiences, we collaborate with businesses, creators, and wholesalers to design marketing solutions that move people and spark conversations.</p>
+        </div>
+        <div class="value-box">
+          <div class="icon">🌟</div>
+          <p><strong>Why Marv Ads?</strong>Because we believe marketing is not just about selling – it’s about storytelling. And your story deserves to be told in the most captivating way.</p>
+        </div>
+      </section>
+      
+          
+    </div>
+  </section>
+  <section class="team-section">
+  <h2>Meet Our Team</h2>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="/images/muneerpic.jpg" alt="Moneer " />
+      <h4>Muneer</h4>
+    </div>
+    <div class="team-member">
+      <img src="/images/abdallah.jpg" alt="Moneer" />
+      <h4>Abdallah </h4>
+    </div>
+    <div class="team-member">
+      <img src="/images/muna.jpg" alt="Muna" />
+      <h4>Muna</h4>
+    </div>
+    <div class="team-member">
+      <img src="/images/waed.jpg" alt="Waed" />
+      <h4>Waed</h4>
+    </div>
+  </div>
+</section>
+  
+
+  <div id="footer-placeholder"></div>
+
+
+  <script>
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      document.querySelector(".navbar").classList.toggle("active");
+    });
+    
+fetch("footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+  });
+  </script>
+</body>
+</html>

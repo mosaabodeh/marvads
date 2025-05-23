@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <!-- Favicon -->
+  <link rel="icon" href="images/ImgLogo.jpg" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services – Marv Ads</title>
+  <link rel="stylesheet" href="serviceStyle.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="images/Logo.png" alt="Logo" class="logo-icon" />
+      <ul>
+                   <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/Service.html">Service</a></li>
+            <li><a href="/Contact.html" class="contact-btn">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Our Services</h1>
+    <p class="intro">
+      At Marv Ads, we offer a range of innovative marketing solutions designed to help you achieve your goals. Our services include:
+    </p>
+    <div class="services">
+      <!-- Existing services -->
+      <div class="service"><h3>Creative Advertising Campaigns</h3><p>Designing eye-catching campaigns that spark curiosity and capture your target audience’s attention.</p></div>
+      <div class="service"><h3>Tailored Marketing Strategies</h3><p>Developing customized marketing strategies that align with your brand identity and objectives.</p></div>
+      <div class="service"><h3>Visual Identity & Branding</h3><p>Creating powerful logos and complete brand visuals that reflect your brand’s strength and uniqueness.</p></div>
+      <div class="service"><h3>AI-Powered Targeted Ads</h3><p>Using AI tools to target the right audience and maximize the impact of your ads.</p></div>
+      <div class="service"><h3>Digital Campaign Management</h3><p>Managing and optimizing your campaigns across various platforms to ensure consistent success and measurable results.</p></div>
+      <div class="service"><h3>CGI Advertising</h3><p>Creating stunning CGI ads that offer unique, visually immersive experiences for your audience.</p></div>
+      <div class="service"><h3>Marketing Consultancy</h3><p>Providing strategic advice and insights to drive growth and innovation in your digital marketing efforts.</p></div>
+      <div class="service"><h3>Content Creation & Social Media Management</h3><p>Producing engaging content and effectively managing your social media accounts to enhance your brand’s presence online.</p></div>
+    </div>
+
+    <!-- "And More" Section -->
+    <div class="and-more">
+      <h2>And More</h2>
+      <p>If there's something specific you need, let us know!</p>
+      <form id="moreServicesForm">
+        <input type="text" id="userRequest" placeholder="Type your service request here..." required />
+        <button type="submit">Submit</button>
+        <p id="successMsg" class="success-message">✔ Your message has been accepted!</p>
+      </form>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <h2>Watch Our Work in Action</h2>
+        <video controls>
+          <source src="/vedios/MarvVed.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+  </main>
+  <div id="footer-placeholder"></div>
+
+
+  <!-- JS for form submission -->
+  <script>
+ 
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+
+
+    const form = document.getElementById('moreServicesForm');
+    const successMsg = document.getElementById('successMsg');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      successMsg.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

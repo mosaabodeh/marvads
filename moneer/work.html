@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="images/ImgLogo.jpg" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work | Company Name</title>
+   <link rel="stylesheet" href="workStyle.css" />
+</head>
+
+<body>
+  <header>
+    <img src="/images/Logo.png" alt="Company Logo" class="logo">
+    <nav>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/Service.html">Service</a></li>
+      <li><a href="/Contact.html" class="contact-btn">CONTACT</a></li>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Our Creative Work</h1>
+
+    <div class="video-grid">
+      <!-- Add your videos with unique IDs -->
+      <div class="video-card">
+        <video id="video1" autoplay muted loop src="vedios/vedMoneer.mp4" onclick="openVideoModal('vedios/vedMoneer.mp4')"></video>
+        <button class="mute-btn" onclick="toggleMute('video1', event)">🔊</button>
+      </div>
+
+      <div class="video-card">
+        <video id="video2" autoplay muted loop src="vedios/ved1.mp4" onclick="openVideoModal('vedios/ved1.mp4')"></video>
+        <button class="mute-btn" onclick="toggleMute('video2', event)">🔊</button>
+      </div>
+
+      <div class="video-card">
+        <video id="video3" autoplay muted loop src="vedios/ved2.mp4" onclick="openVideoModal('vedios/ved2.mp4')"></video>
+        <button class="mute-btn" onclick="toggleMute('video3', event)">🔊</button>
+      </div>
+
+      <div class="video-card">
+        <video id="video4" autoplay muted loop src="vedios/ved3.mp4" onclick="openVideoModal('vedios/ved3.mp4')"></video>
+        <button class="mute-btn" onclick="toggleMute('video4', event)">🔊</button>
+      </div>
+
+      <div class="video-card">
+        <video id="video5" autoplay muted loop src="vedios/ved4.mp4" onclick="openVideoModal('vedios/ved4.mp4')"></video>
+        <button class="mute-btn" onclick="toggleMute('video5', event)">🔊</button>
+      </div>
+
+      <div class="video-card">
+        <video id="video6" autoplay muted loop src="vedios/ved5.mp4" onclick="openVideoModal('vedios/ved5.mp4')"></video>
+        <button class="mute-btn" onclick="toggleMute('video6', event)">🔊</button>
+      </div>
+
+      <!-- New videos -->
+      <div class="video-card">
+        <video id="video7" autoplay muted loop src="vedios/ved7.mp4" onclick="openVideoModal('vedios/ved7.mp4')"></video>
+        <button class="mute-btn" onclick="toggleMute('video7', event)">🔊</button>
+      </div>
+
+      <div class="video-card">
+        <video id="video8" autoplay muted loop src="vedios/buttomVed.mp4" onclick="openVideoModal('vedios/buttomVed.mp4')"></video>
+        <button class="mute-btn" onclick="toggleMute('video8', event)">🔊</button>
+      </div>
+
+      <div class="video-card">
+        <video id="video9" autoplay muted loop src="vedios/ved8.mp4" onclick="openVideoModal('vedios/ved8.mp4')"></video>
+        <button class="mute-btn" onclick="toggleMute('video9', event)">🔊</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for enlarged video -->
+  <div class="video-modal" id="videoModal">
+    <span class="close-btn" onclick="closeVideoModal()">&times;</span>
+    <video id="modalVideo" controls autoplay></video>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    function toggleMute(videoId, event) {
+      event.stopPropagation(); // prevent triggering modal
+      const video = document.getElementById(videoId);
+      video.muted = !video.muted;
+      event.target.textContent = video.muted ? "🔊" : "🔇";
+    }
+
+    function openVideoModal(src) {
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      modal.classList.add('active');
+      modalVideo.src = src;
+      modalVideo.play();
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      modalVideo.pause();
+      modalVideo.src = '';
+      modal.classList.remove('active');
+    }
+
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

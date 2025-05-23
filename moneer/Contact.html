@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Favicon -->
+     <link rel="icon" href="images/ImgLogo.jpg" type="image/x-icon" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="conact.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000; 
+      color: white;
+    }
+
+/* Header Base */
+header {
+  background-color: #101820;
+  padding: 1rem 0;
+}
+
+/* Flex container for nav */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  height: 50px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-menu li a:hover {
+  background-color: #ffffff;
+  color: #101820;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+/* Mobile Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    background-color: #101820;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-menu li a {
+    padding: 0.75rem 1rem;
+  }
+}
+
+header .logo {
+      height: 50px;
+    }
+
+    .hero {
+      height: 100vh;
+      background: radial-gradient(circle at center, rgba(0, 64, 255, 0.4), #000000 70%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      animation: fadeInUp 1.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      animation: fadeInUp 2s ease-out forwards;
+      opacity: 0;
+    }
+
+    .scroll-emoji {
+      font-size: 2.5rem;
+      margin-top: 40px;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    .scroll-emoji img {
+      width: 40px;
+      height: 40px;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .contact-container {
+      background: #fff;
+      color: black;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      font-size: 15px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      width: 48%;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #successMessage {
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+    .contact-btn {
+  background-color: #d31d2a;
+  color: #fff ;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+    
+/* Footer */
+.site-footer {
+  background: #111;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  </style>
+</head>
+
+<body>
+    <header>
+      <div class="nav-container">
+        <img src="/images/Logo.png" alt="Company Logo" class="logo" />
+        <div class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">&#9776;</div>
+        <nav class="navbar">
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/Service.html">Service</a></li>
+            <li><a href="/Contact.html" class="contact-btn">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+
+  <section class="hero">
+    <h1>Welcome to Our Contact Page</h1>
+    <p>We’d love to hear from you — let’s get in touch!</p>
+    <div class="scroll-emoji" onclick="scrollToContact()">
+        <img id="logoid" src="/images/Logo.png" alt="Scroll Down" style="width: 70%; height: auto;">
+    </div>
+  </section>
+
+  <section id="contact" class="contact-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label>Name</label>
+      <input type="text" required>
+
+      <label>Email Address</label>
+      <input type="email" required>
+
+      <label>Phone Number</label>
+      <input type="tel">
+
+      <label>Company</label>
+      <input type="text">
+
+      <label>Website</label>
+      <input type="url">
+
+      <label>Where are you?</label>
+      <input type="text">
+
+      <label>What can we help you with?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="services" value="Consultation"> Consultation</label>
+        <label><input type="checkbox" name="services" value="Campaigns"> Campaigns</label>
+        <label><input type="checkbox" name="services" value="Marketing"> Marketing</label>
+        <label><input type="checkbox" name="services" value="Monthly Plans"> Monthly Plans</label>
+        <label><input type="checkbox" name="services" value="Design Services"> Design Services</label>
+        <label><input type="checkbox" name="services" value="Video Production"> Video Production</label>
+        <label><input type="checkbox" name="services" value="Event Management"> Event Management</label>
+        <label><input type="checkbox" name="services" value="Web/App Development"> Web/App Development</label>
+      </div>
+
+      <label>What is your budget?</label>
+      <select required>
+        <option value="">Select One</option>
+        <option>$500 - $700</option>
+        <option>$700 - $1500</option>
+        <option>$1500+</option>
+        <option>I'm not sure</option>
+        <option>I don't want to say</option>
+      </select>
+
+      <label>When will you be ready to start?</label>
+      <select required>
+        <option value="">Select one...</option>
+        <option>Immediately</option>
+        <option>Within a month</option>
+        <option>Next quarter</option>
+      </select>
+
+      <label>How much do you know what you want?</label>
+      <select>
+        <option>Pretty much</option>
+        <option>Kind of</option>
+        <option>I need help!</option>
+      </select>
+
+      <label>What is your level of technical know-how?</label>
+      <select>
+        <option>I know it all</option>
+        <option>I can relate</option>
+        <option>I need help!</option>
+      </select>
+
+      <label>Are you working in Marketing/Advertising field?</label>
+      <select>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Why are you reaching out now?</label>
+      <textarea></textarea>
+
+
+      <label>Briefly describe your company</label>
+      <textarea></textarea>
+
+      <label>How did you find us?</label>
+      <select>
+        <option value="">Select one...</option>
+        <option>Google</option>
+        <option>Social Media</option>
+        <option>Referral</option>
+        <option>Advertisement</option>
+      </select>
+
+      <label>Anything else you’d like to share?</label>
+      <textarea></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <p id="successMessage" class="hidden">✅ Thank you! Your form has been submitted.</p>
+  </section>
+  <div id="footer-placeholder"></div>
+
+
+  <script src="contact.js"></script>
+</body>
+</html>
